@@ -5,7 +5,7 @@ import '../style/Card.css'
 
 const ProductCard = ({ imgSrc, title, description, products,category,brand }) => {
     return (
-        <Card className="mb-4 text-center ">
+        <Card className="my-3 p-3 rounded mb-4 text-center ">
             <Card.Img variant="top" src={imgSrc}   />
             <Card.Body>
                 <Card.Link href='#'>
