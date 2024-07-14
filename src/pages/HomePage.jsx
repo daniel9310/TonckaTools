@@ -17,23 +17,23 @@ import imgTools4 from '../assets/img4.jpeg';
 
 const products = [
     { imgSrc: imgTools, title: 'Baterias Milwaukee', description: 'High-quality stereo systems', products: 17, category:['batteries', 'charger'],brand:'Milwauke' },
-    { imgSrc: imgTools2, title: 'Home Theatre', description: 'Immersive home theatre experience', products: 12 },
-    { imgSrc: imgTools3, title: 'Bluetooth Speakers', description: 'Portable and powerful', products: 8 },
+    { imgSrc: imgTools2, title: 'Home Theatre', description: 'Immersive home theatre experience', products: 12,category:['batteries', 'charger','drill'] },
+    { imgSrc: imgTools3, title: 'Bluetooth Speakers', description: 'Portable and powerful', products: 8,category:['battery', 'charger','impact wrench'] },
     { imgSrc: imgTools4, title: 'Headphones', description: 'Comfortable and clear sound', products: 8 },
     { imgSrc: 'path/to/speakers.jpg', title: 'Speakers', description: 'High-fidelity speakers', products: 0 },
 ];
 
 const HomePage = () => {
-    const [products,setProducts] = useState([]);
+    // const [products,setProducts] = useState([]);
 
-    useEffect( () => {
-        axios.get('http://localhost:3000/api/products')
-            .then((response) => {
-                setProducts(response.data)
-            }).catch((err) => {
-                console.log('There was an error fetching the products!', err)
-            });
-    })
+    // useEffect( () => {
+    //     axios.get('http://localhost:3000/api/products')
+    //         .then((response) => {
+    //             setProducts(response.data)
+    //         }).catch((err) => {
+    //             console.log('There was an error fetching the products!', err)
+    //         });
+    // })
     return (
         <>
             <NavigationBar />

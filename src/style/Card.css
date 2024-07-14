@@ -17,12 +17,14 @@
     border-top-right-radius: 8px;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
 
   }
-  .card img:hover{
+  /* .card img:hover{
     /* transform: scale(1.4); */
 
-  }
+/*  } */
 
   .card-body {
     background-color: #a1acb9;
@@ -38,4 +40,33 @@
     font-size: 1rem;
     margin-bottom: 1.25rem;
   }
-  
+  #cardLabel{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgb(255, 255, 255);
+}
+#cardLabelProductos{
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  background-color: danger;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.stack {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.badge {
+  margin: 5px 0;
+}

@@ -2,6 +2,10 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import TonckaLogo from '../assets/tonkaLogo.png'
+import { Link } from 'react-router-dom';
+import ToolList from './ToolList';
+import ToolDetail from './ToolDetail';
+
 const NavigationBar = () => {
     return (
         
@@ -18,7 +22,7 @@ const NavigationBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Nav.Link href="#home">Inicio</Nav.Link>
-                        <Nav.Link href="#tools">Herramientas</Nav.Link>
+                        <Nav.Link href={`/tools`}>Herramientas</Nav.Link>
                         <Nav.Link href="#pricing">Precio</Nav.Link>
                         <Nav.Link href="#contact">Contacto</Nav.Link>
                         <Nav.Link href="#about">Contactanos</Nav.Link>

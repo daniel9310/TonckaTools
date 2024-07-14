@@ -77,6 +77,27 @@ app.get('/api/products', async (req, res) => {
     const products = await Product.find();
     res.json(products);
 });
+const tools = [
+    { id: 1, name: 'Team Workspace', description: 'Team Workspace Description', location: 'California, USA', price: '300$', capacity: '24', image: 'https://via.placeholder.com/300' },
+    { id: 2, name: 'Coworking Workspace', description: 'Coworking Workspace Description', location: 'California, USA', price: '300$', capacity: '24', image: 'https://via.placeholder.com/300' },
+    { id: 3, name: 'Meeting Office Space', description: 'Meeting Office Space Description', location: 'London, Canary Wharf, UK', price: '50$', capacity: '2-4', image: 'https://via.placeholder.com/300' },
+    { id: 4, name: 'Conference Room', description: 'Conference Room Description', location: 'Paris, Île-de-France, France', price: '150$', capacity: '50', image: 'https://via.placeholder.com/300' },
+    { id: 5, name: 'Lifestyle Space', description: 'Lifestyle Space Description', location: 'Madrid, Hortaleza, Spain', price: '200$', capacity: '30', image: 'https://via.placeholder.com/300' },
+    { id: 6, name: 'Private Space', description: 'Private Space Description', location: 'New York, Manhattan, USA', price: '400$', capacity: '2', image: 'https://via.placeholder.com/300' },
+  ];
+  
+  app.get('/api/tools', (req, res) => {
+    res.json(tools);
+  });
+  
+  app.get('/api/tools/:id', (req, res) => {
+    const tool = tools.find(t => t.id === parseInt(req.params.id));
+    if (tool) {
+      res.json(tool);
+    } else {
+      res.status(404).send('Tool not found');
+    }
+  });
 
 // Start the server
 const PORT = process.env.PORT || 5000;
